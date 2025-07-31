@@ -3,8 +3,8 @@ export default function Contact() {
     <div className="section contact-section">
       <h2>Contact Me</h2>
       <p>
-        If you’d like to work together or just say hello, feel free to reach
-        out!
+        If you&apos;d like to work together or just say hello, feel free to
+        reach out!
       </p>
       <ul>
         <li>

@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Projects() {
-  // TypeScript хувилбар - type annotation нэмсэн
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const projects = [
@@ -81,7 +81,7 @@ export default function Projects() {
           <h2 className="projects-title">My Projects</h2>
           <div className="title-underline"></div>
           <p className="projects-subtitle">
-            Discover the digital experiences I've crafted with passion and
+            Discover the digital experiences I&apos;ve crafted with passion and
             precision
           </p>
         </div>
@@ -96,8 +96,24 @@ export default function Projects() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Project Image */}
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
+              <div
+                className="project-image"
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "250px",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
                 <div className="image-overlay"></div>
 
                 {/* Status Badge */}

@@ -1,14 +1,19 @@
-// components/about.jsx
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="section about-section">
       <div className="about-content">
         {/* Image Section */}
         <div className="about-image">
-          <img
+          <Image
             src="/assets/pro.jpeg"
             alt="Temuulen Undrakh - Frontend Developer"
             className="profile-image"
+            width={300} // Зургийн өргөн (зөвшөөрөгдсөн хэмжээг тохируулаарай)
+            height={300} // Зургийн өндөр
+            style={{ borderRadius: "50%" }}
+            priority // Хангалттай хурдан ачаалуулахад нэмэлт проп
           />
         </div>
 
@@ -16,8 +21,9 @@ export default function About() {
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            Hello! I'm <span className="highlight-text">Temuulen Undrakh</span>,
-            a passionate{" "}
+            Hello! I&apos;m{" "}
+            <span className="highlight-text">Temuulen Undrakh</span>, a
+            passionate{" "}
             <span className="highlight-text">Frontend Developer</span>
             based in <span className="highlight-text">Dublin, Ireland</span>. I
             specialize in creating modern, responsive, and user-friendly web
@@ -33,7 +39,7 @@ export default function About() {
             deliver high-performance applications.
           </p>
           <p>
-            I'm dedicated to{" "}
+            I&apos;m dedicated to{" "}
             <span className="highlight-text">continuous learning</span>
             and staying updated with the latest web technologies. Through this
             portfolio, I aim to share valuable insights, showcase my projects,
@@ -41,9 +47,10 @@ export default function About() {
             the tech community.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new technologies,
-            contributing to open-source projects, or sharing knowledge with the
-            developer community. Let's build something amazing together!
+            When I&apos;m not coding, you can find me exploring new
+            technologies, contributing to open-source projects, or sharing
+            knowledge with the developer community. Let&apos;s build something
+            amazing together!
           </p>
         </div>
       </div>
