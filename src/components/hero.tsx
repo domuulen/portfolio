@@ -13,11 +13,11 @@ export default function Hero() {
 
   return (
     <main className="hero">
-      <div className="hero-content">
+      <div className="hero-content" style={{ gap: "8rem" }}>
         {/* Текст хэсэг */}
         <div className="text-section">
           <p className="welcome-text">Welcome to my Portfolio</p>
-          <h1 className="main-title">
+          <h1 className="title">
             Hi! I'm <span className="highlight">Coup</span>
           </h1>
           <p className="description">
@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
 
           <button className="connect-button" onClick={handleClick}>
-            Let’s Check Words <span className="arrow">→</span>
+            Let's Check Words <span className="arrow">→</span>
           </button>
         </div>
         <div className="image-section">

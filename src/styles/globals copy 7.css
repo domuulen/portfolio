@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Navbar styles --- */
+.navbar {
+  background-color: transparent;
+  color: transparent;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding-right: 2rem;
+  white-space: nowrap;
+}
+
+.nav-links li a {
+  color: #6b56ff;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 0.3rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  padding:0;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  background: url('/assets/bg.jpg') center center / cover no-repeat;
+  background-size: 102% auto;
+  animation: moveBackground 20s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.text-section {
+  flex: 1;
+  text-align: left;
+}
+
+.welcome-text {
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #6b56ff, #a774ff);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: white;
+  user-select: none;
+}
+
+
+.logo-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #6b56ff; /* Тод ягаан/цэнхэр өнгө */
+  font-weight: 700; /* Тод, зузаан */
+}
+
+
+.highlight-line {
+  color: #6b56ff;
+  font-weight: 700;
+  border-bottom: 3px solid #a774ff;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.highlight-line:hover {
+  color: #a774ff;
+  border-bottom-color: #6b56ff;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 600px; /* Энэ утгыг томруулна */
+}
+
+.image-box {
+  width: 100%;
+  max-width: 400px;
+ 
+  border-radius: 12px;
+  backdrop-filter: blur(0.8px);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative; /* Гол контейнер */
+  overflow: visible;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 80%; /* дугуй хэлбэр */
+  position: relative;
+  transform-origin: 60% 50%; /* төвөөс бага зэрэг зүүн тийш хазайсан */
+  animation: orbitAnimation 6s linear infinite;
+  object-fit: cover;
+}
+
+@keyframes orbitAnimation {
+  0% {
+    transform: rotate(0deg) translateX(15px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(15px) rotate(-360deg);
+  }
+}
+
+.image-box img:hover {
+  cursor: pointer;
+  transform: scale(1.1) rotate(0deg);
+}
+
+
+/* --- Footer --- */
+.footer {
+  background-color: #6b56ff;
+  text-align: center;
+  padding:0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* --- Reusable Section Style --- */
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* --- Button стили --- */
+.connect-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.connect-button:hover {
+  color: #6b56ff;
+}
+
+/* Arrow class used inside the button */
+.arrow {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* --- Section backgrounds --- */
+.about-section {
+  background-color: #b00020; /* red */
+}
+
+.projects-section {
+  background-color: #1e88e5; /* blue */
+}
+
+.contact-section {
+  background-color: #388e3c; /* green */
+}
+
+/* --- Projects grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #fff;
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Contact links --- */
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* --- Popup styles (unchanged) --- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  padding: 1rem 4rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.popup-content::-webkit-scrollbar {
+  display: none;
+}
+
+.keywords-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.keywords-list li {
+  margin-bottom: 0.8rem;
+}
+
+.highlight-word {
+  text-transform: capitalize;
+  color: #6b56ff;
+  font-weight: 700;
+}
+
+.translation-text {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.popup-content p {
+  margin-top: 0.3rem;
+  color: black;
+  line-height: 1.5;
+}
+
+.popup-content button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #6b56ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #5a45d1;
+}
+
+/* --- About Section-ийн шинэ загвар --- */
+.about-section {
+  padding: 100px 40px; /* Дээд, доод хэсэгт илүү том зай үүсгэнэ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px; /* Зураг болон текст хоорондын зайг томруулна */
+  max-width: 1400px; /* Нийт агуулгын өргөнийг томруулна */
+}
+
+/* Дэлгэц томрох үед зургийг зүүн, текстийг баруун талд байрлуулна */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.about-image {
+  width: 350px; /* Зургийн өргөнийг томруулна */
+  height: 350px; /* Зургийн өндрийг томруулна */
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-image:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: 3.5rem; /* Гарчигны фонтын хэмжээг томруулна */
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.3rem; /* Параграпын фонтын хэмжээг томруулна */
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: #6b56ff;
+  font-weight: 700;
+}

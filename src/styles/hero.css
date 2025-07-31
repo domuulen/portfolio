@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  padding: 0;
+  min-height: 100vh; /* height-ийг min-height болгосон */
+  color: white;
+  overflow: hidden;
+  background: url('/assets/bg.jpg') center center / cover no-repeat;
+  animation: moveBackground 20s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px; /* 1200px-аас 1400px болгосон */
+  width: 100%;
+  margin: 0 auto;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 2rem; /* дээд доод padding багасгасан */
+}
+
+.text-section {
+  flex: 1.5;
+  text-align: left;
+}
+
+.welcome-text {
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #6b56ff, #a774ff);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  color: white;
+  user-select: none;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem); /* clamp ашиглаж responsive болгосон */
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.description {
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* description-д clamp нэмсэн */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #6b56ff;
+  font-weight: 700;
+}
+
+.highlight-line {
+  color: #6b56ff;
+  font-weight: 700;
+  border-bottom: 3px solid #a774ff;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.highlight-line:hover {
+  color: #a774ff;
+  border-bottom-color: #6b56ff;
+}
+
+/* --- Button стили --- */
+.connect-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.connect-button:hover {
+  color: #6b56ff;
+}
+
+.arrow {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 500px; /* 400px-аас 500px болгосон */
+}
+
+.image-box {
+  width: 100%;
+  max-width: 500px; /* 400px-аас 500px болгосон */
+  min-width: 250px; /* 200px-аас 250px болгосон */
+  border-radius: 12px;
+  backdrop-filter: blur(0.8px);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: visible;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  min-width: 250px; /* 200px-аас 250px болгосон */
+  min-height: 250px; /* 200px-аас 250px болгосон */
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 80%;
+  position: relative;
+  transform-origin: 60% 50%;
+  animation: orbitAnimation 6s linear infinite;
+  object-fit: cover;
+}
+
+@keyframes orbitAnimation {
+  0% {
+    transform: rotate(0deg) translateX(15px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(15px) rotate(-360deg);
+  }
+}
+
+.image-box img:hover {
+  cursor: pointer;
+  transform: scale(1.1) rotate(0deg);
+}
+
+/* --- Popup styles --- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.popup-content::-webkit-scrollbar {
+  display: none;
+}
+
+.keywords-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.keywords-list li {
+  margin-bottom: 1rem;
+}
+
+.highlight-word {
+  text-transform: capitalize;
+  color: #6b56ff;
+  font-weight: 700;
+}
+
+.translation-text {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.popup-content h2 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.popup-content p {
+  margin-top: 0.3rem;
+  color: black;
+  line-height: 1.5;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+.popup-content button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #6b56ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #5a45d1;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .image-section {
+    min-height: 450px; /* 350px-аас 450px болгосон */
+  }
+  
+  .image-box {
+    max-width: 420px; /* 320px-аас 420px болгосон */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto; /* min-height auto болгосон */
+    padding: 2rem 0; /* padding нэмсэн */
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center; /* text-align center нэмсэн */
+  }
+
+  .text-section {
+    width: 100%;
+    text-align: center; /* text-align center болгосон */
+  }
+
+  .image-section {
+    justify-content: center;
+    min-height: 350px; /* 300px-аас 350px болгосон */
+    order: -1; /* Зургийг дээш аваачсан */
+  }
+
+  .image-box {
+    max-width: 300px; /* 250px-аас 300px болгосон */
+  }
+
+  .image-box img {
+    min-width: 220px; /* 180px-аас 220px болгосон */
+    min-height: 220px; /* 180px-аас 220px болгосон */
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .hero-content {
+    padding: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .image-section {
+    min-height: 300px; /* 250px-аас 300px болгосон */
+  }
+
+  .image-box {
+    max-width: 250px; /* 200px-аас 250px болгосон */
+  }
+
+  .image-box img {
+    min-width: 180px; /* 150px-аас 180px болгосон */
+    min-height: 180px; /* 150px-аас 180px болгосон */
+  }
+
+  .connect-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem 0;
+  }
+
+  .hero-content {
+    padding: 0.25rem;
+    gap: 1rem;
+  }
+
+  .welcome-text {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .image-section {
+    min-height: 250px; /* 200px-аас 250px болгосон */
+  }
+
+  .image-box {
+    max-width: 220px; /* 180px-аас 220px болгосон */
+  }
+
+  .image-box img {
+    min-width: 160px; /* 130px-аас 160px болгосон */
+    min-height: 160px; /* 130px-аас 160px болгосон */
+  }
+
+  .connect-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .popup-content {
+    padding: 0.75rem;
+    margin: 0.25rem;
+  }
+
+  .popup-content button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Жижиг дэлгэцэнд зориулсан нэмэлт стиль */
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .image-box {
+    max-width: 200px; /* 160px-аас 200px болгосон */
+  }
+  
+  .image-box img {
+    min-width: 150px; /* 120px-аас 150px болгосон */
+    min-height: 150px; /* 120px-аас 150px болгосон */
+  }
+}
