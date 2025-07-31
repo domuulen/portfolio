@@ -4,7 +4,7 @@
 .hero {
   position: relative;
   padding: 0;
-  min-height: 100vh; /* height-ийг min-height болгосон */
+  min-height: 100vh;
   color: white;
   overflow: hidden;
   background: url('/assets/bg.jpg') center center / cover no-repeat;
@@ -37,13 +37,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px; /* 1200px-аас 1400px болгосон */
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   gap: 2rem;
   position: relative;
   z-index: 1;
-  padding: 1rem 2rem; /* дээд доод padding багасгасан */
+  padding: 1rem 2rem;
 }
 
 .text-section {
@@ -65,7 +65,7 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem); /* clamp ашиглаж responsive болгосон */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -74,7 +74,7 @@
 }
 
 .description {
-  font-size: clamp(0.9rem, 2vw, 1.1rem); /* description-д clamp нэмсэн */
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -128,13 +128,15 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 500px; /* 400px-аас 500px болгосон */
+  min-height: 500px;
+  /* Зургийг доошлуулахын тулд margin-top нэмсэн */
+  margin-top: 50px; 
 }
 
 .image-box {
   width: 100%;
-  max-width: 500px; /* 400px-аас 500px болгосон */
-  min-width: 250px; /* 200px-аас 250px болгосон */
+  max-width: 500px;
+  min-width: 250px;
   border-radius: 12px;
   backdrop-filter: blur(0.8px);
   background: rgba(255, 255, 255, 0);
@@ -146,8 +148,8 @@
 .image-box img {
   width: 100%;
   height: auto;
-  min-width: 250px; /* 200px-аас 250px болгосон */
-  min-height: 250px; /* 200px-аас 250px болгосон */
+  min-width: 250px;
+  min-height: 250px;
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -267,45 +269,47 @@
   }
   
   .image-section {
-    min-height: 450px; /* 350px-аас 450px болгосон */
+    min-height: 450px;
+    margin-top: 30px; /* Дунд зэргийн дэлгэц дээр margin-top нэмсэн */
   }
   
   .image-box {
-    max-width: 420px; /* 320px-аас 420px болгосон */
+    max-width: 420px;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: auto; /* min-height auto болгосон */
-    padding: 2rem 0; /* padding нэмсэн */
+    min-height: auto;
+    padding: 2rem 0;
   }
 
   .hero-content {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
-    text-align: center; /* text-align center нэмсэн */
+    text-align: center;
   }
 
   .text-section {
     width: 100%;
-    text-align: center; /* text-align center болгосон */
+    text-align: center;
   }
 
   .image-section {
     justify-content: center;
-    min-height: 350px; /* 300px-аас 350px болгосон */
-    order: -1; /* Зургийг дээш аваачсан */
+    min-height: 350px;
+    order: -1;
+    margin-top: 0; /* Mobile дээр margin-ийг болиулсан */
   }
 
   .image-box {
-    max-width: 300px; /* 250px-аас 300px болгосон */
+    max-width: 300px;
   }
 
   .image-box img {
-    min-width: 220px; /* 180px-аас 220px болгосон */
-    min-height: 220px; /* 180px-аас 220px болгосон */
+    min-width: 220px;
+    min-height: 220px;
   }
 
   .popup-content {
@@ -324,16 +328,16 @@
   }
 
   .image-section {
-    min-height: 300px; /* 250px-аас 300px болгосон */
+    min-height: 300px;
   }
 
   .image-box {
-    max-width: 250px; /* 200px-аас 250px болгосон */
+    max-width: 250px;
   }
 
   .image-box img {
-    min-width: 180px; /* 150px-аас 180px болгосон */
-    min-height: 180px; /* 150px-аас 180px болгосон */
+    min-width: 180px;
+    min-height: 180px;
   }
 
   .connect-button {
@@ -363,16 +367,16 @@
   }
 
   .image-section {
-    min-height: 250px; /* 200px-аас 250px болгосон */
+    min-height: 250px;
   }
 
   .image-box {
-    max-width: 220px; /* 180px-аас 220px болгосон */
+    max-width: 220px;
   }
 
   .image-box img {
-    min-width: 160px; /* 130px-аас 160px болгосон */
-    min-height: 160px; /* 130px-аас 160px болгосон */
+    min-width: 160px;
+    min-height: 160px;
   }
 
   .connect-button {
@@ -398,11 +402,11 @@
   }
   
   .image-box {
-    max-width: 200px; /* 160px-аас 200px болгосон */
+    max-width: 200px;
   }
   
   .image-box img {
-    min-width: 150px; /* 120px-аас 150px болгосон */
-    min-height: 150px; /* 120px-аас 150px болгосон */
+    min-width: 150px;
+    min-height: 150px;
   }
 }

@@ -1,63 +1,55 @@
-// components/navbar.jsx
-"use client";
-import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <header className="navbar">
+      <nav className="navbar">
         <div className="logo">
-          <Image src="/assets/coup2.png" alt="Logo" width={270} height={50} />
+          <h1>MyLogo</h1>
         </div>
-        <nav>
-          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <li>
-              <Link href="#home" onClick={closeMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="#about" onClick={closeMenu}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="#projects" onClick={closeMenu}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="#contact" onClick={closeMenu}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <button
-            className={`mobile-menu-btn ${isMenuOpen ? "active" : ""}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </nav>
-      </header>
-      {/* Mobile backdrop */}
+
+        <button
+          className={`mobile-menu-btn ${menuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <li>
+            <a href="#home" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={closeMenu}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={closeMenu}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Mobile backdrop to close menu when clicking outside */}
       <div
-        className={`mobile-backdrop ${isMenuOpen ? "active" : ""}`}
+        className={`mobile-backdrop ${menuOpen ? "active" : ""}`}
         onClick={closeMenu}
       ></div>
     </>

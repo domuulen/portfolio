@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* --- Navbar styles --- */
 .navbar {
   background-color: transparent;
@@ -34,7 +50,7 @@
   margin: 0;
   padding-right: 2rem;
   white-space: nowrap;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: static;
 }
 
 .nav-links li a {
@@ -63,7 +79,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+  z-index: 1100;
 }
 
 .mobile-menu-btn span {
@@ -102,13 +118,16 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1050;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .mobile-backdrop.active {
+  display: block;
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* Responsive Design */
@@ -124,7 +143,8 @@
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
     width: 280px;
     height: 100vh;
     background: linear-gradient(135deg, rgba(107, 86, 255, 0.95), rgba(167, 116, 255, 0.95));
@@ -134,12 +154,14 @@
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1100;
+    white-space: normal;
   }
 
   .nav-links.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .nav-links li {
@@ -180,11 +202,12 @@
 
   .nav-links {
     width: 100%;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
   }
 
   .nav-links.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .nav-links li a {
