@@ -7,7 +7,7 @@ export default function About() {
         {/* Image Section */}
         <div className="about-image">
           <Image
-            src="/assets/pro.jpeg"
+            src="/assets/coupmain.jpeg"
             alt="Temuulen Undrakh - Frontend Developer"
             className="profile-image"
             width={300}
@@ -22,35 +22,34 @@ export default function About() {
           <h2>About Me</h2>
           <p>
             Hello! I&apos;m{" "}
-            <span className="highlight-text">Temuulen Undrakh</span>, a
-            passionate{" "}
-            <span className="highlight-text">Frontend Developer</span>
-            based in <span className="highlight-text">Dublin, Ireland</span>. I
-            specialize in creating modern, responsive, and user-friendly web
-            applications that provide exceptional digital experiences.
+            <span className="highlight-text">Coup Software</span>, and my goal
+            is to learn and grow together with you. I aim to share useful,
+            user-focused information through my own research and insights. This
+            will include topics such as{" "}
+            <span className="highlight-text">artificial intelligence</span>,{" "}
+            <span className="highlight-text">web applications</span>, and
+            lesser-known <span className="highlight-text">tech hacks</span>.
           </p>
           <p>
-            With expertise in <span className="highlight-text">React</span>,{" "}
-            <span className="highlight-text">Next.js</span>,{" "}
-            <span className="highlight-text">TypeScript</span>, and{" "}
-            <span className="highlight-text">Tailwind CSS</span>, I transform
-            creative ideas into interactive digital solutions. My approach
-            combines clean code practices with innovative design principles to
-            deliver high-performance applications.
+            My current approach involves combining{" "}
+            <span className="highlight-text">clean</span> and{" "}
+            <span className="highlight-text">clear coding practices</span> with
+            innovative design principles to build high-performance applications.
           </p>
           <p>
-            I&apos;m dedicated to{" "}
-            <span className="highlight-text">continuous learning</span>
-            and staying updated with the latest web technologies. Through this
-            portfolio, I aim to share valuable insights, showcase my projects,
-            and connect with fellow developers and potential collaborators in
-            the tech community.
+            I&apos;m committed to{" "}
+            <span className="highlight-text">continuous learning</span> and
+            staying updated with the latest trends in web technologies. Through
+            this portfolio, I strive to share valuable knowledge, present my
+            projects, and connect with developers and collaborators in the tech
+            industry.
           </p>
           <p>
-            When I&apos;m not coding, you can find me exploring new
-            technologies, contributing to open-source projects, or sharing
-            knowledge with the developer community. Let&apos;s build something
-            amazing together!
+            When I&apos;m not coding, I enjoy exploring new technologies,
+            contributing to{" "}
+            <span className="highlight-text">open-source projects</span>, or
+            sharing what I&apos;ve learned with the developer community.
+            Let&apos;s build something amazing together!
           </p>
         </div>
       </div>

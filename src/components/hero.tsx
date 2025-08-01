@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="text-section">
           <p className="welcome-text">Welcome to my Portfolio</p>
           <h1 className="main-title">
-            Hi! I&apos;m <span className="highlight">Temuulen</span>
+            Hi! I&apos;m <span className="highlight">Coup</span>
           </h1>
           <p className="description">
             This portfolio has been thoughtfully created with the purpose of
@@ -42,25 +42,8 @@ export default function Hero() {
           </p>
 
           <button className="connect-button" onClick={handleClick}>
-            Let’s Check Words <span className="arrow">→</span>
+            Let’s Check Key Words <span className="arrow">→</span>
           </button>
-        </div>
-        <div className="image-section">
-          <div className="image-box">
-            <a
-              href="https://www.instagram.com/coupsoft/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* Image компонентоор орлуулсан */}
-              <Image
-                src="/assets/coup.png"
-                alt="Temuulen Profile"
-                width={300}
-                height={300}
-              />
-            </a>
-          </div>
         </div>
       </div>
       {/* Popup */}

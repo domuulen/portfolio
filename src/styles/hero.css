@@ -4,7 +4,7 @@
 .hero {
   position: relative;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* height-ийг min-height болгосон */
   color: white;
   overflow: hidden;
   background: url('/assets/bg.jpg') center center / cover no-repeat;
@@ -53,30 +53,30 @@
 
 .welcome-text {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Томруулсан */
   background: linear-gradient(90deg, #6b56ff, #a774ff);
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 1rem;
   border-radius: 4px;
   display: inline-block;
   color: white;
   user-select: none;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3rem); /* Томруулсан */
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 1rem;
-  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
   color: #fff;
 }
 
 .description {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem); /* Томруулсан */
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
 }
 
 .highlight {
@@ -104,13 +104,13 @@
   border: none;
   color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.3rem; /* Томруулсан */
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   transition: color 0.3s ease;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 6px;
 }
 
@@ -120,7 +120,7 @@
 
 .arrow {
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1.6rem; /* Томруулсан */
 }
 
 .image-section {
@@ -129,8 +129,6 @@
   justify-content: flex-end;
   align-items: center;
   min-height: 500px;
-  /* Зургийг доошлуулахын тулд margin-top нэмсэн */
-  margin-top: 50px; 
 }
 
 .image-box {
@@ -227,12 +225,12 @@
 
 .translation-text {
   font-style: italic;
-  font-size: 0.85rem;
+  font-size: 1rem; /* Томруулсан */
   color: #666;
 }
 
 .popup-content h2 {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2.4rem); /* Томруулсан */
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -241,19 +239,19 @@
   margin-top: 0.3rem;
   color: black;
   line-height: 1.5;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-size: clamp(1rem, 3vw, 1.2rem); /* Томруулсан */
 }
 
 .popup-content button {
   margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   background-color: #6b56ff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Томруулсан */
   transition: background-color 0.3s ease;
 }
 
@@ -270,7 +268,6 @@
   
   .image-section {
     min-height: 450px;
-    margin-top: 30px; /* Дунд зэргийн дэлгэц дээр margin-top нэмсэн */
   }
   
   .image-box {
@@ -300,7 +297,6 @@
     justify-content: center;
     min-height: 350px;
     order: -1;
-    margin-top: 0; /* Mobile дээр margin-ийг болиулсан */
   }
 
   .image-box {
@@ -314,6 +310,26 @@
 
   .popup-content {
     padding: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1.3rem; /* Томруулсан */
+  }
+
+  .title {
+    font-size: clamp(2.8rem, 8vw, 4rem); /* Томруулсан */
+  }
+
+  .description {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Томруулсан */
+  }
+
+  .connect-button {
+    font-size: 1.1rem; /* Томруулсан */
+  }
+
+  .arrow {
+    font-size: 1.5rem; /* Томруулсан */
   }
 }
 
@@ -341,7 +357,7 @@
   }
 
   .connect-button {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* Томруулсан */
     padding: 0.6rem 1.2rem;
   }
 
@@ -362,8 +378,8 @@
   }
 
   .welcome-text {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.5rem;
+    font-size: 1.1rem; /* Томруулсан */
+    padding: 0.3rem 0.6rem;
   }
 
   .image-section {
@@ -380,7 +396,7 @@
   }
 
   .connect-button {
-    font-size: 0.85rem;
+    font-size: 1rem; /* Томруулсан */
     padding: 0.5rem 1rem;
   }
 
@@ -390,15 +406,26 @@
   }
 
   .popup-content button {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Томруулсан */
     padding: 0.6rem 1.2rem;
+  }
+
+  .title {
+    font-size: clamp(2.3rem, 7vw, 3.5rem); /* Томруулсан */
+  }
+
+  .description {
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Томруулсан */
+  }
+
+  .arrow {
+    font-size: 1.3rem; /* Томруулсан */
   }
 }
 
-/* Жижиг дэлгэцэнд зориулсан нэмэлт стиль */
 @media (max-width: 360px) {
   .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Томруулсан */
   }
   
   .image-box {
@@ -408,5 +435,17 @@
   .image-box img {
     min-width: 150px;
     min-height: 150px;
+  }
+  
+  .welcome-text {
+    font-size: 1rem; /* Томруулсан */
+  }
+  
+  .connect-button {
+    font-size: 0.95rem; /* Томруулсан */
+  }
+  
+  .arrow {
+    font-size: 1.2rem; /* Томруулсан */
   }
 }
