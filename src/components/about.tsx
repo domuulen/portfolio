@@ -10,10 +10,10 @@ export default function About() {
             src="/assets/pro.jpeg"
             alt="Temuulen Undrakh - Frontend Developer"
             className="profile-image"
-            width={300} // Зургийн өргөн (зөвшөөрөгдсөн хэмжээг тохируулаарай)
-            height={300} // Зургийн өндөр
+            width={300}
+            height={300}
             style={{ borderRadius: "50%" }}
-            priority // Хангалттай хурдан ачаалуулахад нэмэлт проп
+            priority
           />
         </div>
 
