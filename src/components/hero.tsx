@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="text-section">
           <p className="welcome-text">Welcome to my Portfolio</p>
           <h1 className="main-title">
-            Hi! I'm <span className="highlight">Temuulen</span>
+            Hi! I&apos;m <span className="highlight">Temuulen</span>
           </h1>
           <p className="description">
             This portfolio has been thoughtfully created with the purpose of
